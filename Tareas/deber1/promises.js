@@ -5,25 +5,25 @@
     Primero creamos un arreglo con varios objetos, estos son menus de un restaurante
 */
 const menus = [
-    {
-        nombre: "Cena Marinera",
-        entrada: "coctel de camarones",
-        sopa: "viche",
-        plato_fuerte: "Corvina apanda en salsa de mariscos",
-        bebida: "limonada"
-    }, {
-        nombre: "Cena Parrillera",
-        entrada: "mix de embutidos",
-        sopa: "consome",
-        plato_fuerte: "Milanesa de res con chuletas de cerdo en sala bbq",
-        bebida: "orchata"
-    }, {
-        nombre: "Cena Criolla",
-        entrada: "papa con cascara y tostado",
-        sopa: "caldo de gallina de campo",
-        plato_fuerte: "carnes coloradas con ensalada de lechuga",
-        bebida: "té frio de cedron"
-    }
+    // {
+    //     nombre: "Cena Marinera",
+    //     entrada: "coctel de camarones",
+    //     sopa: "viche",
+    //     plato_fuerte: "Corvina apanda en salsa de mariscos",
+    //     bebida: "limonada"
+    // }, {
+    //     nombre: "Cena Parrillera",
+    //     entrada: "mix de embutidos",
+    //     sopa: "consome",
+    //     plato_fuerte: "Milanesa de res con chuletas de cerdo en sala bbq",
+    //     bebida: "orchata"
+    // }, {
+    //     nombre: "Cena Criolla",
+    //     entrada: "papa con cascara y tostado",
+    //     sopa: "caldo de gallina de campo",
+    //     plato_fuerte: "carnes coloradas con ensalada de lechuga",
+    //     bebida: "té frio de cedron"
+    // }
 ]
 
 function getMenus() {
@@ -69,6 +69,7 @@ async function buscarMenus() {
             cont.appendChild(tarjet);
         }
     } catch (error) {
+        console.error(error);
         const cont = document.getElementById('container');
         cont.innerHTML = `<p class="errorMsg">${error.message}</p>`;
     }
